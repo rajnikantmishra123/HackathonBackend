@@ -1,5 +1,7 @@
 package com.example.HackathonBackend.controller;
 
+import com.example.HackathonBackend.dto.SignupRequestDto;
+import com.example.HackathonBackend.dto.SignupResponseDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,9 +14,6 @@ public class AuthController {
         return "String";
     }
 
-    @PostMapping("/signup")
-    public ResponseEntity<SignupResponseDto> signup(@RequestBody SignupRequestDto signupRequestDto){
-        return ResponseEntity.ok(authService.signup(signupRequestDto));
-    }
+
 
 }
