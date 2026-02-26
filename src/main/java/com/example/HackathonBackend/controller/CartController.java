@@ -17,7 +17,7 @@ public class CartController {
         this.cartService = cartService;
     }
 
-    @PostMapping
+    @PostMapping("create")
     public ResponseEntity<CartResponseDto> addItemToCart(
             @RequestParam(defaultValue = "1") Long userId,
             @RequestBody CartItemRequestDto requestDto) {
